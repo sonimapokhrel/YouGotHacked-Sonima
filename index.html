@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SYSTEM COMPROMISED - SECURITY WAKE-UP CALL</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚠️</text></svg>">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background: #050505;
+      color: #d0ffd0;
+      font-family: 'Consolas', 'Courier New', monospace;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    .scanline {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        rgba(0, 255, 80, 0.03) 50%,
+        rgba(0, 255, 80, 0.03) 51%,
+        transparent 51%
+      );
+      background-size: 100% 4px;
+      animation: scan 12s linear infinite;
+      opacity: 0.18;
+      z-index: 1;
+    }
+
+    .container {
+      position: relative;
+      z-index: 10;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 6vw 5vw;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .warning {
+      font-size: clamp(2.4rem, 8vw, 5rem);
+      font-weight: bold;
+      letter-spacing: 0.35em;
+      color: #ff4444;
+      text-shadow: 0 0 28px rgba(255, 68, 68, 0.5);
+      margin-bottom: 0.4em;
+    }
+
+    .main-title {
+      font-size: clamp(3.2rem, 11vw, 6.6rem);
+      font-weight: 900;
+      letter-spacing: 0.5em;
+      color: #ffffff;
+      text-shadow: 0 0 40px rgba(0, 255, 100, 0.38);
+      margin: 0.3em 0 0.7em;
+    }
+
+    .messages {
+      font-size: clamp(1.05rem, 3.6vw, 1.5rem);
+      max-width: 90ch;
+      width: 100%;
+      color: #bbffbb;
+      background: rgba(0, 30, 0, 0.52);
+      padding: clamp(1.8rem, 6vw, 3rem) clamp(2rem, 7vw, 3.8rem);
+      border: 1px solid rgba(0, 255, 100, 0.28);
+      border-radius: 8px;
+      backdrop-filter: blur(6px);
+      margin: 2.2rem 0 3rem;
+    }
+
+    .messages p {
+      margin: 1.3em 0;
+    }
+
+    .messages strong {
+      color: #ffea55;
+      font-weight: bold;
+    }
+
+    .sign {
+      font-size: clamp(1.1rem, 3.2vw, 1.5rem);
+      color: #66bb88;
+      letter-spacing: 0.3em;
+      margin-top: 2rem;
+      opacity: 0.88;
+    }
+
+    .blink {
+      animation: blink 1.7s step-end infinite;
+    }
+
+    @keyframes scan {
+      0%   { transform: translateY(-100%); }
+      100% { transform: translateY(100%); }
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 8vw 6vw;
+      }
+      .messages {
+        padding: 2rem 1.8rem;
+      }
+      .warning {
+        letter-spacing: 0.2em;
+      }
+      .main-title {
+        letter-spacing: 0.3em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="scanline"></div>
+
+<div class="container">
+  <div class="warning">SECURITY BREACH</div>
+  
+  <h1 class="main-title">SYSTEM <span class="blink">_</span> COMPROMISED</h1>
+
+  <div class="messages">
+    <p><strong>Don't just write code — start thinking like a defender too!</strong></p>
+    
+    <p><strong>SECURITY IS THE BIGGEST RISK IN 2025.</strong></p>
+    
+    <p><strong>LEARN CYBERSECURITY!</strong><br>
+       <span style="opacity:0.9">Not tomorrow. Today.</span></p>
+    
+    <p><strong>Coding alone won't protect you.</strong></p>
+
+    <p style="margin-top: 3em;">
+      I didn't hack you.<br>
+      <strong>You literally left your password at my doorstep.</strong>
+    </p>
+
+    <p style="margin-top: 2.5em;">
+      <strong>BE SAFE. STAY ALERT. ALWAYS VERIFY.</strong>
+    </p>
+
+    <p style="margin-top: 3em; opacity:0.92;">
+      P.S. I didn't touch anything important on your GitHub.<br>
+      This time it was just a loud wake-up call.
+    </p>
+  </div>
+
+  <div class="sign">
+    — A friendly reminder • 0xSEC
+  </div>
+</div>
+
+</body>
+</html>
